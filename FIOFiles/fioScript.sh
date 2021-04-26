@@ -26,7 +26,6 @@ rm randread*
 rm randwrite*
 rm sequential_read*
 rm sequential_write*
-echo "Finished running FIO Tests"
 echo "Finished running FIO Tests" >> fioResults_${hypervisor}_${host}_${guest}_${ram}.txt
-echo "Finished running FIO File Tests"
+echo "Finished running FIO Tests"
 
