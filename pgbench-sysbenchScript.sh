@@ -9,7 +9,7 @@ ram=$4
 echo "Starting PGBench Test"
 echo "Starting new PGBench Test" >> pgbenchResults_${hypervisor}_${host}_${guest}_${ram}.txt
 sudo -u postgres psql -c "CREATE DATABASE testdb;"
-sudo -u postgres pgbench -i testdb -s 334
+sudo -u postgres pgbench -i testdb -s 334 -q
 sudo -u postgres pgbench -c 10 -j 1 -t 100 testdb >> pgbenchResults_${hypervisor}_${host}_${guest}_${ram}.txt
 exit #Leave postgres user
 
