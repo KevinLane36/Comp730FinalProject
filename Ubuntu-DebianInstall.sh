@@ -11,3 +11,6 @@ sudo apt -y install sysbench
 
 echo "Installing fio"
 sudo apt -y install fio
+
+echo "Installing iperf3"
+sudo apt-get install iperf3
