@@ -1,6 +1,6 @@
 #! /bin/bash
 
-echo "Installing PSQL and PGBench
+echo "Installing PSQL and PGBench"
 sudo apt install postgresql postgresql-contrib -y
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
