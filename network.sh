@@ -1,10 +1,10 @@
 #! /bin/bash
 
-hypervisor = $1
-host = $2
-guest = $3
-ram = $4
-ipaddr = $5
+hypervisor=$1
+host=$2
+guest=$3
+ram=$4
+ipaddr=$5
 
 tcp_time="tcp_time_${hypervisor}_${host}_${guest}_${ram}.json"
 udp_time="udp_time_${hypervisor}_${host}_${guest}_${ram}.json"
