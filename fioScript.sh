@@ -7,9 +7,8 @@ guest=$3
 ram=$4
 
 
-echo "Starting FIO File Tests"
-echo "Starting new FIO Tests"
-echo "Starting new FIO Tests" >> fioResults_${hypervisor}_${host}_${guest}_${ram}.txt
+echo "Starting new FIO File Tests"
+echo "Starting new FIO File Tests" >> fioResults_${hypervisor}_${host}_${guest}_${ram}.txt
 echo "Starting random read test"
 echo "Starting random read test" >> fioResults_${hypervisor}_${host}_${guest}_${ram}.txt
 fio FIOJobFiles/randomReadJob.fio >> fioResults_${hypervisor}_${host}_${guest}_${ram}.txt
