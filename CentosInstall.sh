@@ -2,10 +2,10 @@
 
 echo "Installing PSQL and PGBench"
 sudo yum install postgresql-server postgresql-contrib -y
-sudo su postgres
-psql -c "CREATE DATABASE testdb;"
-pgbench -i testdb -s 334
-pgbench -c 10 -j 1 -t 100 testdb
+sudo postgresql-setup initdb
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
 
 echo "Installing sysbench"
 curl -s https://packagecloud.io/install/repositories/akopytov/sysbench/script.rpm.sh | sudo bash
