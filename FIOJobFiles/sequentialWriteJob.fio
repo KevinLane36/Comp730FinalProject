@@ -1,7 +1,7 @@
-[randwrite]
+[sequential_write]
 ioengine=libaio
 iodepth=16
-rw=randwrite
+rw=write
 bs=4k
 direct=0
 size=512M
