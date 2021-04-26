@@ -1,4 +1,5 @@
 #! /bin/bash
+sudo apt-get install curl
 
 echo "Installing PSQL and PGBench"
 sudo apt install postgresql postgresql-contrib -y
@@ -13,4 +14,4 @@ echo "Installing fio"
 sudo apt -y install fio
 
 echo "Installing iperf3"
-sudo apt-get install iperf3
+sudo apt-get install iperf3 -y
