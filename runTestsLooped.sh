@@ -2,6 +2,7 @@
 
 if [ "$#" -ne 4 ]; then
     echo "Illegal number of parameters. Please provider [hypervisor host guest ram]"
+    exit
 fi
 
 hypervisor=$1
