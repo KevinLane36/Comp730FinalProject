@@ -1,14 +1,32 @@
+#! /bin/bash
+
+echo "What hypervisor are you using?"
+read hypervisor
+
+echo "What host OS are you running on?"
+read host
+
+echo "What guest OS are you running?"
+read guest
+
+echo "How many GB of RAM?"
+read ram
+
+echo "What is the IP address for iperf3 server?"
+read ipaddr
+
+
 echo "Starting PGBench Test"
-echo "Starting new PGBench Test" >> pgbenchResults.txt
+echo "Starting new PGBench Test" >> pgbenchResults_${hypervisor}_${host}_${guest}_${ram}.txt
 sudo su postgres
 psql -c "CREATE DATABASE testdb;"
 pgbench -i testdb -s 334
-pgbench -c 10 -j 1 -t 100 testdb >> pgbenchResults.txt
+pgbench -c 10 -j 1 -t 100 testdb >> pgbenchResult_${hypervisor}_${host}_${guest}_${ram}.txt
 
 
 echo "Starting sysbench Test"
-echo "Starting new sysbench Test" >> sysbenchResults.txt
+echo "Starting new sysbench Test" >> sysbenchResults_${hypervisor}_${host}_${guest}_${ram}.txt
 echo "Starting CPU test" >> sysbenchResults.txt
-sysbench --test=cpu --cpu-max-prime=20000 run >> sysbenchResults.txt
+sysbench --test=cpu --cpu-max-prime=20000 run >> sysbenchResults_${hypervisor}_${host}_${guest}_${ram}.txt
 echo "Starting Mem test" >> sysbenchResults.txt
-sysbench --test=memory --memory-block-size=1M --memory-total-size=4G --num-threads=1 run >> sysbenchResults.txt
+sysbench --test=memory --memory-block-size=1M --memory-total-size=4G --num-threads=1 run >> sysbenchResults_${hypervisor}_${host}_${guest}_${ram}.txt
