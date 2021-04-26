@@ -1,19 +1,11 @@
 #! /bin/bash
 
-echo "What hypervisor are you using?"
-read hypervisor
 
-echo "What host OS are you running on?"
-read host
-
-echo "What guest OS are you running?"
-read guest
-
-echo "How many GB of RAM?"
-read ram
-
-echo "What is the IP address for iperf3 server?"
-read ipaddr
+hypervisor = $1
+host = $2
+guest = $3
+ram = $4
+ipaddr = $5
 
 
 echo "Starting PGBench Test"
