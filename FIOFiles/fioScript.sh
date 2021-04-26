@@ -17,6 +17,10 @@ echo "Starting sequential read test" >> fioResults_${hypervisor}_${host}_${guest
 fio sequentialReadJob.fio >> fioResults_${hypervisor}_${host}_${guest}_${ram}.txt
 echo "Starting sequential write test" >> fioResults_${hypervisor}_${host}_${guest}_${ram}.txt
 fio sequentialWriteJob.fio >> fioResults_${hypervisor}_${host}_${guest}_${ram}.txt
+rm randread*
+rm randwrite*
+rm sequential_read*
+rm sequential_write*
 echo "Finished running FIO Tests" >> fioResults_${hypervisor}_${host}_${guest}_${ram}.txt
 echo "Finished running FIO File Tests"
 
