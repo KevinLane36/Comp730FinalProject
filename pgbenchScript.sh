@@ -5,8 +5,6 @@ hypervisor = $1
 host = $2
 guest = $3
 ram = $4
-ipaddr = $5
-
 
 echo "Starting PGBench Test"
 echo "Starting new PGBench Test" >> pgbenchResults_${hypervisor}_${host}_${guest}_${ram}.txt
