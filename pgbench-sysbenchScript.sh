@@ -1,17 +1,16 @@
 #! /bin/bash
 
 
-hypervisor = $1
-host = $2
-guest = $3
-ram = $4
+hypervisor=$1
+host=$2
+guest=$3
+ram=$4
 
 echo "Starting PGBench Test"
 echo "Starting new PGBench Test" >> pgbenchResults_${hypervisor}_${host}_${guest}_${ram}.txt
-sudo su postgres
-psql -c "CREATE DATABASE testdb;"
-pgbench -i testdb -s 334
-pgbench -c 10 -j 1 -t 100 testdb >> pgbenchResult_${hypervisor}_${host}_${guest}_${ram}.txt
+sudo -u postgres psql -c "CREATE DATABASE testdb;"
+sudo -u postgres pgbench -i testdb -s 334 -q
+sudo -u postgres pgbench -c 10 -j 1 -t 100 testdb >> pgbenchResults_${hypervisor}_${host}_${guest}_${ram}.txt
 
 
 echo "Starting sysbench Test"
