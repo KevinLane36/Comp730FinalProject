@@ -13,6 +13,6 @@ ram=$4
 
 for i in 1 2 3 4 5
 do
-   bash fioScript.sh hypervisor host guest ram
-   bash pgbench-sysbenchScript.sh hypervisor host guest ram
+   bash fioScript.sh $hypervisor $host $guest $ram
+   bash pgbench-sysbenchScript.sh $hypervisor $host $guest $ram
 done
