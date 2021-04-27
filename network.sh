@@ -8,7 +8,7 @@ ipaddr=$5
 
 
 
-echo "Starting PGBench Test"
+echo "Starting iperf Test"
 echo "Starting new iperf Test" >> iperfResults_${hypervisor}_${host}_${guest}_${ram}.txt
 echo "Starting tcp_time test"
 echo "Starting tcp_time test" >> iperfResults_${hypervisor}_${host}_${guest}_${ram}.txt
