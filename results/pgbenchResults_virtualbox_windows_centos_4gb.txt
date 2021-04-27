@@ -1,0 +1,55 @@
+Starting new PGBench Test
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 334
+query mode: simple
+number of clients: 10
+number of threads: 1
+number of transactions per client: 100
+number of transactions actually processed: 1000/1000
+latency average = 8.434 ms
+tps = 1185.703899 (including connections establishing)
+tps = 1188.978396 (excluding connections establishing)
+Starting new PGBench Test
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 334
+query mode: simple
+number of clients: 10
+number of threads: 1
+number of transactions per client: 100
+number of transactions actually processed: 1000/1000
+latency average = 7.837 ms
+tps = 1275.963886 (including connections establishing)
+tps = 1280.326301 (excluding connections establishing)
+Starting new PGBench Test
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 334
+query mode: simple
+number of clients: 10
+number of threads: 1
+number of transactions per client: 100
+number of transactions actually processed: 1000/1000
+latency average = 7.118 ms
+tps = 1404.961210 (including connections establishing)
+tps = 1411.215788 (excluding connections establishing)
+Starting new PGBench Test
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 334
+query mode: simple
+number of clients: 10
+number of threads: 1
+number of transactions per client: 100
+number of transactions actually processed: 1000/1000
+latency average = 49.341 ms
+tps = 202.672630 (including connections establishing)
+tps = 203.129543 (excluding connections establishing)
+Starting new PGBench Test
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 334
+query mode: simple
+number of clients: 10
+number of threads: 1
+number of transactions per client: 100
+number of transactions actually processed: 1000/1000
+latency average = 37.773 ms
+tps = 264.741277 (including connections establishing)
+tps = 265.331557 (excluding connections establishing)
